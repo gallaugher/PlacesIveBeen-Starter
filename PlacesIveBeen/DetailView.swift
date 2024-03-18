@@ -38,6 +38,7 @@ struct DetailView: View {
         .font(.title2)
         .padding()
         .navigationBarTitleDisplayMode(.inline)
+        .navigationBarBackButtonHidden()
         .toolbar {
             ToolbarItem(placement: .topBarLeading) {
                 Button("Cancel") {
