@@ -3,12 +3,18 @@
 // YouTube.com/profgallaugher  -  threads.net/john.gallaugher
 
 import SwiftUI
+import SwiftData
 
 @main
 struct PlacesIveBeenApp: App {
     var body: some Scene {
         WindowGroup {
             PlacesListView()
+                .modelContainer(for: Place.self)
         }
+    }
+    
+    init() {
+        print(URL.applicationSupportDirectory.path(percentEncoded: false))
     }
 }

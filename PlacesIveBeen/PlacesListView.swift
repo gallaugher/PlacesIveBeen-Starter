@@ -3,16 +3,12 @@
 // YouTube.com/profgallaugher  -  threads.net/john.gallaugher
 
 import SwiftUI
+import SwiftData
 
 struct PlacesListView: View {
-    @State private var places = ["Valetta",
-                                 "Istanbul",
-                                 "Palmero",
-                                 "Rome",
-                                 "Venice",
-                                 "Milan",
-                                 "Zurich"]
+    @Query var places: [Place]
     @State private var sheetIsPresented = false // used to toggle presentation of the sheet
+    @Environment(\.modelContext) private var modelContext
     
     var body: some View {
         NavigationStack {
@@ -20,11 +16,11 @@ struct PlacesListView: View {
                 ForEach(places, id: \.self) { place in
                     NavigationLink {
                         // Destination
-                        DetailView(placeName: place)
+                        DetailView(place: place)
                     } label: {
                         Image(systemName: "mappin")
                             .foregroundStyle(.blue)
-                        Text(place)
+                        Text(place.city)
                     }
                     .font(.title)
 
@@ -46,7 +42,7 @@ struct PlacesListView: View {
         .sheet(isPresented: $sheetIsPresented) {
             // Add a NavigationStack so that toolbar (where buttons are) shows when presented. Note this sheet modifier is NOT embedded inside the NavigationStack above. All sheets need a separate Navigation Stack
             NavigationStack {
-                DetailView(placeName: "") // Pass in an empty value for placeName since, after pressing "+", we're entering a new "placeName"
+                DetailView(place: Place(city: "", country: nil)) // Pass in an empty value for placeName since, after pressing "+", we're entering a new "placeName"
             }
         }
     }
@@ -54,4 +50,5 @@ struct PlacesListView: View {
 
 #Preview {
     PlacesListView()
+        .modelContainer(for: Place.self, inMemory: true)
 }

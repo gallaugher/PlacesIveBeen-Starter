@@ -12,6 +12,7 @@
 		3E3155FA2B96C4A300C079D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E3155F92B96C4A300C079D9 /* Assets.xcassets */; };
 		3E3155FD2B96C4A300C079D9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E3155FC2B96C4A300C079D9 /* Preview Assets.xcassets */; };
 		3E3156062B96CB5A00C079D9 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3156052B96CB5A00C079D9 /* DetailView.swift */; };
+		3E3B1B3F2BA958B800A4F4DE /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3B1B3E2BA958B800A4F4DE /* Place.swift */; };
 		3E3B6C682BA7B24B0013D2A3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3B6C672BA7B24B0013D2A3 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
@@ -22,6 +23,7 @@
 		3E3155F92B96C4A300C079D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3E3155FC2B96C4A300C079D9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3E3156052B96CB5A00C079D9 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		3E3B1B3E2BA958B800A4F4DE /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		3E3B6C672BA7B24B0013D2A3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -56,6 +58,7 @@
 			isa = PBXGroup;
 			children = (
 				3E3155F52B96C4A200C079D9 /* PlacesIveBeenApp.swift */,
+				3E3B1B3E2BA958B800A4F4DE /* Place.swift */,
 				3E3155F72B96C4A200C079D9 /* PlacesListView.swift */,
 				3E3156052B96CB5A00C079D9 /* DetailView.swift */,
 				3E3B6C672BA7B24B0013D2A3 /* Constants.swift */,
@@ -147,6 +150,7 @@
 				3E3156062B96CB5A00C079D9 /* DetailView.swift in Sources */,
 				3E3155F62B96C4A200C079D9 /* PlacesIveBeenApp.swift in Sources */,
 				3E3B6C682BA7B24B0013D2A3 /* Constants.swift in Sources */,
+				3E3B1B3F2BA958B800A4F4DE /* Place.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
